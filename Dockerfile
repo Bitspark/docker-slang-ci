@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Julian Matschinske (Bitspark) <julian.matschinske@bitspark.de> (@jmatschinske)
 
-RUN apk update && apk add git python3 nodejs nodejs-npm zip tar go musl-dev
+RUN apk update && apk add openssl git python3 nodejs nodejs-npm zip tar go musl-dev
 
 ENV GOROOT /usr/lib/go
 ENV GOPATH /gopath

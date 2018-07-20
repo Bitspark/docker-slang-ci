@@ -1,10 +1,10 @@
-FROM debian:latest
+FROM python:3.7.0-stretch
 MAINTAINER Julian Matschinske (Bitspark) <julian.matschinske@bitspark.de> (@jmatschinske)
 
 RUN apt-get update
 
 # General
-RUN apt-get install -y openssl git python3 zip tar golang musl-dev curl wget software-properties-common gnupg
+RUN apt-get install -y openssl git zip tar golang musl-dev curl wget software-properties-common gnupg
 
 # Install NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -

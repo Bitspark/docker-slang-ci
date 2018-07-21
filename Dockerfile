@@ -4,14 +4,16 @@ MAINTAINER Julian Matschinske (Bitspark) <julian.matschinske@bitspark.de> (@jmat
 RUN apt-get update
 
 # General
-RUN apt-get install -y openssl git zip tar golang musl-dev curl wget software-properties-common gnupg
+RUN apt-get install -y openssl git zip tar musl-dev curl wget software-properties-common gnupg
 
 # Install NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 
-# Setup Go environment
-ENV GOROOT /usr/lib/go
+# Install Go
+RUN wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+RUN tar -xvf go1.10.3.linux-amd64.tar.gz && mv go /usr/local
+ENV GOROOT /usr/local/go
 ENV GOPATH /gopath
 ENV GOBIN /gopath/bin
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin

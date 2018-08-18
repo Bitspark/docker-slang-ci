@@ -4,7 +4,7 @@ MAINTAINER Julian Matschinske (Bitspark) <julian.matschinske@bitspark.de> (@jmat
 RUN apt-get update
 
 # General
-RUN apt-get install -y openssl git zip tar musl-dev curl wget software-properties-common gnupg
+RUN apt-get install -y openssl git zip tar musl-dev curl wget software-properties-common gnupg osslsigncode
 
 # Install NodeJS
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -

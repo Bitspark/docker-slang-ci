@@ -11,7 +11,7 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get install -y nodejs
 
 # Install Go
-RUN wget https://dl.google.com/go/go1.10.3.linux-amd64.tar.gz
+RUN wget https://dl.google.com/go/go1.11.1.linux-amd64.tar.gz
 RUN tar -xvf go1.10.3.linux-amd64.tar.gz && mv go /usr/local
 ENV GOROOT /usr/local/go
 ENV GOPATH /gopath
